@@ -6,7 +6,6 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: cover;
 }
 
 .usuario {
@@ -23,8 +22,8 @@
 }
 
 .titulo > h1 {
-  font-family: "Arial, sans-serif", "Aladin, system-ui", "Viga, sans-serif" 3;
-  font-size: 300%;
+  font-family: "Arial, sans-serif", "Aladin, system-ui", "Viga, sans-serif" 2;
+  font-size: 400%;
   margin-left: 30%;
   color: aliceblue;
   overflow: hidden;
@@ -46,7 +45,7 @@
   border-radius: 100%;
   width: 350px;
   height: 350px;
-  margin-top: 40%;
+  margin-top: 20%;
   top: 43%;
   left: 30%;
   transform: translateY(-50%);
@@ -97,10 +96,10 @@
     font-size: 24px;
   }
 }
-.perfil, .festividades, .historia, .juego, .rutas, .opcion {
+.festividades, .historia, .juego, .rutas, .opcion {
   height: 50px;
   width: 140px;
-  margin-top: 45%;
+  margin-top: 50%;
   padding-top: auto;
   border: 2px solid rgba(16, 47, 104, 0.685);
   border-radius: 100%;
@@ -110,31 +109,30 @@
   transition: all 0.3s ease;
 }
 
-.juego {
-  height: 70px;
-  margin-left: -80%;
+.festividades {
+  margin-left: -20%;
   margin-right: 10%;
 }
 
-.festividades {
-  margin-left: -80%;
+.juego {
+  height: 70px;
+  margin-left: -20%;
   margin-right: 10%;
 }
 
 .rutas {
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
-.perfil:hover, .festividades:hover, .historia:hover, .juego:hover, .rutas:hover, .opcion:hover {
+.festividades:hover, .historia:hover, .juego:hover, .rutas:hover, .opcion:hover {
   transform: scale(1.1);
 }
 
-.perfil > h5, .festividades > h5, .historia > h5, .juego > h5, .opcion > h5, .rutas > h5 {
+.festividades > h5, .historia > h5, .juego > h5, .opcion > h5, .rutas > h5 {
   margin-top: 10px;
 }
 
 .containerGrande {
-  margin-top: -20%;
   width: auto;
   height: auto;
   display: flex;
@@ -142,8 +140,8 @@
 }
 
 .menu {
-  margin-left: 15%;
-  margin-top: 22%;
+  margin-left: 5%;
+  margin-top: -230px;
   margin-bottom: 0;
   display: none;
   opacity: 0;
@@ -182,17 +180,36 @@ h2, .loginTexto, .btn, #login, #registro {
   font-style: italic;
 }
 
+/*
+    Estilos para el footer
+*/
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.144);
+  border-top: 1px solid #ccc;
+  box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.007);
+  right: 0px;
+  left: 0px;
+}
+
+.footer > p {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
 /* Estilos para formulario */
 .opiniones > h4 {
   text-align: center;
   font-size: large;
   margin-right: 10vw;
   margin-left: 10vw;
-  margin-top: 5%;
+  margin-top: -10px;
   color: white;
 }
 
-#formulario {
+form {
   color: white;
   background-color: rgba(255, 255, 255, 0.2666666667);
   justify-content: center;
@@ -200,18 +217,17 @@ h2, .loginTexto, .btn, #login, #registro {
   align-items: center;
   text-align: center;
   text-align: center;
-  padding-bottom: 50px;
-  padding-top: 50px;
-  width: 870px;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  width: 550px;
   margin: auto;
 }
 
-#formulario > label,
-#formulario > textarea,
-#formulario > input[type=submit] {
-  font-family: "Arial, sans-serif", "Aladin, system-ui", "Viga, sans-serif" 2;
+label,
+textarea,
+input[type=submit] {
+  font-family: "Arial, sans-serif", "Aladin, system-ui", "Viga, sans-serif" 3;
   justify-content: center;
-  font-size: large;
   margin-right: 10px;
 }
 
@@ -230,7 +246,7 @@ h2, .loginTexto, .btn, #login, #registro {
   background-color: black;
 }
 
-#comentario, #formulario > input {
+#comentario, input {
   border: 2px solid black;
   border-radius: 5px;
   font-family: "Arial, sans-serif", "Aladin, system-ui", "Viga, sans-serif" 3;
@@ -256,10 +272,8 @@ h2, .loginTexto, .btn, #login, #registro {
 #comentariosDestacados {
   font-family: "Arial, sans-serif", "Aladin, system-ui", "Viga, sans-serif" 3;
   justify-content: center;
-  text-align: center;
   margin-top: 20px;
   margin-left: 40px;
-  margin-bottom: 100px;
 }
 
 .comentario {
@@ -289,40 +303,10 @@ h2, .loginTexto, .btn, #login, #registro {
 }
 
 .paginaPrincipal {
-  margin-top: 0;
+  margin-top: 15%;
   position: absolute;
   width: auto;
   height: auto;
   display: column;
   justify-content: center;
-}
-
-a {
-  color: black;
-}
-
-/* estilos emoticonos informacion footer */
-.img1 {
-  margin-right: 80px;
-  width: 50px;
-  height: 50px;
-}
-
-.img2 {
-  width: 120px;
-  height: 60px;
-}
-
-button:hover {
-  transform: scale(1.4);
-}
-
-button {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
 }/*# sourceMappingURL=style.css.map */

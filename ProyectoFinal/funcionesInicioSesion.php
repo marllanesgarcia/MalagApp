@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['usuario_id'] = $id;
                 $_SESSION['usuario'] = $usuario;
 
-                echo "<body style= 'width: 100%; height: 100%; margin: 0; padding: 0;background: linear-gradient(to bottom right, #5C0000, #9E1717);'>
+                echo "<body style= 'width: 100%; height: 100%; margin: 0; padding: 0;background: linear-gradient(to bottom right, #00255c,#3064b1, #1e9ac0);'>
                 <div style= 'position: relative; top:10%; left: 50%; transform: translate(-50%, 50%);
                 width: 80%; max-width: 400px; padding: 20px; background-color: #f0f0f0b9;
                 border-radius: 10px; text-align: center; box-shadow: 0 0 10px white;'>

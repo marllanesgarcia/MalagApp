@@ -1,0 +1,102 @@
+/*
+    Media Query
+*/
+/* Estilos para móviles y tablets */
+@media only screen and (max-width: 800px) {
+   
+    .titulo > h1{
+        font-size: 250%;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+
+    .contenido > h4{
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    #pregunta{
+        font-size: 20px;
+    }
+
+    #botonSiguiente{ 
+        width: 150px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .logo{
+        width: 90px;
+        height: 90px;
+        top:10%;
+        left: 10px;
+    }
+
+    .logo > img{
+        margin-left: 30%;
+        margin-top: -18%;
+    }
+
+    #imagen {
+        margin-top: -120%;
+        width: 80px;
+        height: 80px;
+        }
+    
+    
+    .logo > h5{
+        width: 55px;
+        height: 12px;
+        margin-top: 25%;
+        margin-bottom: 2%;
+        margin-left: 4%;
+        font-size: 12px;
+    }
+}
+
+/* Media query para pantallas de portátiles */
+@media (min-width:800px) and (max-width: 1390px) {
+
+    .titulo > h1{
+        font-size: 450%;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    .contenido > h4{
+        margin-top: 70px;
+    }
+
+    .logo{
+        width: 150px;
+        height: 150px;
+        top:20%;
+        left: 30px;
+    }
+
+    .logo > img{
+        margin-left: 30%;
+        margin-top: -20%;
+    }
+
+    #imagen {
+        margin-top: -120%;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .logo > h5{
+        width: 80px;
+        height: 20px;
+        margin-top: 25%;
+        margin-bottom: 2%;
+        margin-left: 4%;
+        font-size: 18px;
+    }
+
+    .contenido > h4{
+        font-size: 15px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}

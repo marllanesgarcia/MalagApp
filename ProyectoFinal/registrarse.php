@@ -20,7 +20,7 @@
         <div>
             <h2>Registro</h2>
                 </br>
-                <form method="post" action="funcionesRegistro.php">
+                <form method="post" action="funcionesRegistro.php" id="otro">
 
                     <label for="usuario" class="loginTexto">Usuario </label>
                     <input type="text" name="usuario" id="usuario" class="form-control"><br>
@@ -40,12 +40,6 @@
                     <a href='index.php'><input type="submit" class="btn btn-outline-secondary" value="Volver"></a>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>informacion footer</p>
-    </footer>
-
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 

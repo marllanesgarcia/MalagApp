@@ -1,6 +1,8 @@
+/* diferentes estilos para el calendario de la página de Festividades */
 .calendar {
     display: flex;
     flex-flow: column;
+
 }
 .calendar .header .month-year {
     font-size: 20px;
@@ -8,6 +10,7 @@
     color: #69d0ff;
     padding: 20px 0;
 }
+
 .calendar .days {
     display: flex;
     flex-flow: wrap;
@@ -78,11 +81,10 @@
     cursor: inherit;
 }
 
-/* Estilos para los nombres de los días de la semana */
 .day_name {
-    background-color: #f0f0f0; /* Color de fondo deseado */
-    padding: 5px; /* Espacio alrededor del texto */
-    text-align: center; /* Centrar el texto horizontalmente */
+    background-color: #f0f0f0;
+    padding: 5px;
+    text-align: center;
 }
 
 #calendar > div.fc-view-harness.fc-view-harness-active > div > table > tbody > tr > td > div > div > div > table{

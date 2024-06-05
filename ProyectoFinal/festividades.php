@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MalagApp</title>
     <link rel="stylesheet" href="./css/paginas.css">
-    <link rel="stylesheet" href="./pruebas/style.css" type="text/css">
-    <link rel="stylesheet" href="./pruebas/calendar.css" type="text/css">
+    <link rel="stylesheet" href="./css/mediaQueryFestividades.css">
+    <link rel="stylesheet" href="./css/calendar.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&family=Viga&display=swap" rel="stylesheet">
@@ -22,21 +22,35 @@
         border-top: 1px solid #ccc;
         box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.007);
         height: 100%;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: -16px;
     }
 
-    footer> p {
+    .spam {
+        color: white;
+        margin-top: 30px;
+        justify-content: center;
+        display: flex;
+        font-family: "viga";
+    }
+
+    footer>p {
         text-align: center;
         color: white;
         margin-top: 10px;
     }
 
+    a {
+        color: black;
+    }
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
-            events: './pruebas/datoseventos.php',
+            events: './datoseventos.php',
             eventClick: function(info) {
                 $('#eventInfo').html('<h2>' + info.event.title + '</h2><p>' + info.event.extendedProps.descripcion + '</p>');
                 $('#eventInfo').show();
@@ -47,7 +61,7 @@
     });
 </script>
 
-<body class="festividades">
+<body>
     <div class="usuario">
         <?php
         session_start();
@@ -63,12 +77,14 @@
         <div class="logo" id="logo">
             <h5>MalagApp </h5>
             <img src="./logoBoqueroncio.png" alt="logotipo MalaApp">
+            <img id="imagen" src="./css/img/bocadillo.png" alt="mensajito de Boqueroncio">
         </div>
         <h1>Festividades</h1>
         <button id="boton">☰</button>
         <div id="menu" class="hidden">
             <ul>
                 <li><a href="index.php">Inicio</a></li>
+                <li><a href="usuario.php">Perfil</a></li>
                 <li><a href="festividades.php">Festividades</a></li>
                 <li><a href="historia.php">Historia</a></li>
                 <li><a href="rutas.php">Rutas</a></li>
@@ -80,20 +96,19 @@
 
     <div class="contenido">
         <h4>
-            El trozo de texto estándar de Lorem Ipsum usado desde el año
-            1500 es reproducido debajo para aquellos interesados. Las secciones
-            1.10.32 y1.10.33Lorem Ipsum es simplemente el texto de relleno de
-            las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
-            relleno estándar de las industrias desde el año 1500, c
-            uando un impresor (N. del T. persona que se dedica a la imprenta) des
-            conocido usó una galería de textos y los mezcló de tal manera que logró h
+            Bienvenid@ a la sección Festividades donde podrás descubrir numerosos planes
+            y sitios a los que ir a disfrutar de la ciudad, de sus fiestas tradicionales y eventos interesantes.
+            ¿Estás preparad@ para la aventura que te espera?</br>
+            Baja y apúntate a la que más te guste. En nuestro calendario interactivo podrás enterarte de todas las fiestas y eventos de Málaga.</br>
+            Si te gusta, no olvides ponernos una valoración en la <a id="a1" href="index.php">Página Principal</a> donde podras enviarnos tu opinión y sugerencias.</br>
+            ¡No te lo pierdas!
         </h4>
     </div>
 
-    <div class="content home">
+    <div class="content-home">
         <div class="calendar-container-small" id="calendar-container">
-            <div id="calendar" class="calendar"></div>
-            <div id="eventInfo" style="display: none;"></div> <!-- Div para mostrar la información del evento, oculto inicialmente -->
+            <div id="calendar" class="calendar"></div></br>
+            <div id="eventInfo" style="display: none;"></div>
         </div>
     </div>
 
@@ -127,21 +142,28 @@
         </div>
     </div>
 
-    <div id="containerAbajo">
-        <div id="anuncio2"><img src="./css/img/anuncio.jpg"></div>
-        <!-- <div id="juego">
-            <img src="./css/img/boton1.png" type="button" id="juego">
-        </div> -->
+    <h5 class="spam"> Si te ha gustado, escribe tu opinión yendo a &nbsp;<a id="a2" href="index.php">la Página Principal</a>. ¡Nos ayudarías mucho!</h5>
+
+    <div id="anuncio2">
+        <img src="./css/img/anuncio.jpg">
     </div>
 
     <!-- Footer -->
     <footer>
+        <div class="info">
+            <button onclick="mostrarModal1()"><img class="img1" src="./css/img/sobre.png" alt="email"></button>
+            <button onclick="mostrarModal2()"><img class="img1" src="./css/img/telf.png" alt="telefono"></button>
+            <button onclick="mostrarModal3()"><img class="img2" src="./css/img/reloj.png" alt="horario atencion al cliente"></button>
+        </div>
         <p>&copy; 2024 MalagApp. Todos los derechos reservados.</p>
         <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
     </footer>
 
 </body>
-<script src="paginas.js"></script>
+
+<script src="./js/paginas.js"></script>
+<script src="./js/saberMas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>

@@ -16,15 +16,15 @@ body {
 }
 
 .titulo {
-  padding-top: 75px;
+  padding-top: 5vw;
   justify-content: center;
   display: flex;
 }
 
 .titulo > h1 {
   font-family: "Aladin";
-  font-size: 700%;
-  color: #A19BE7;
+  font-size: 8vw;
+  color: #847be6;
   -webkit-text-stroke: 1px black;
   text-stroke: 1px black;
   animation: aparecer 5s forwards;
@@ -43,8 +43,9 @@ body {
     opacity: 2;
   }
 }
+/* Estilos para el logotipo */
 .logo {
-  background-color: rgba(127, 165, 209, 0.192);
+  background-color: rgba(127, 169, 209, 0.192);
   border-radius: 100%;
   width: 250px;
   height: 250px;
@@ -54,8 +55,8 @@ body {
 }
 
 .logo:hover {
-  background-color: rgba(41, 77, 155, 0.377);
-  border: 2px solid rgb(34, 38, 100);
+  background-color: rgba(41, 100, 155, 0.377);
+  border: 2px solid rgb(34, 57, 100);
 }
 
 .logo > img {
@@ -76,6 +77,16 @@ body {
   background: linear-gradient(to right, #A19BE7 0%, #A19BE7 50%, #89B6C4 50%, #218D2C 100%);
 }
 
+#imagen {
+  display: none;
+  width: 150px;
+  height: 150px;
+  height: auto;
+  margin-top: -90%;
+  margin-left: 70%;
+}
+
+/* estilos parrafo de introduccion */
 .contenido {
   text-align: justify;
   justify-content: center;
@@ -83,19 +94,23 @@ body {
 }
 
 .contenido > h4 {
-  color: #004B5B;
+  color: #000000;
   text-align: center;
-  font-size: large;
-  margin-right: 10vw;
-  margin-left: 10vw;
-  margin-top: 100px;
+  font-size: 1.1vw;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  margin-top: 5vw;
+}
+
+#a1 {
+  font-size: 1.1vw;
 }
 
 .usuario {
   padding-top: 10px;
   text-align: center;
-  background-color: rgba(99, 185, 204, 0.5019607843);
-  border-bottom: solid 2px rgba(0, 74, 91, 0.5019607843);
+  background-color: rgba(99, 141, 204, 0.5019607843);
+  border-bottom: solid 2px rgba(0, 39, 91, 0.5019607843);
 }
 
 /* Estilos para el botón */
@@ -105,7 +120,7 @@ body {
   right: 30px;
   padding: 10px 20px;
   margin-top: 40px;
-  background-color: rgba(30, 154, 192, 0.5058823529);
+  background-color: rgba(11, 66, 117, 0.5058823529);
   color: white;
   border: none;
   height: 70px;
@@ -125,11 +140,13 @@ body {
   padding: 20px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
+  z-index: 10000;
 }
 
 /* Ocultar el menú por defecto */
 #menu.hidden {
   transform: translateX(100%);
+  z-index: 10000;
 }
 
 /* Estilos para la lista de opciones del menú */
@@ -138,24 +155,28 @@ body {
   padding: 0;
   padding-top: 30%;
   padding-left: 10%;
+  z-index: 10000;
 }
 
 #menu ul li {
   margin-bottom: 30px;
+  z-index: 10000;
 }
 
 #menu ul li a:hover {
   color: #55d7ff;
   cursor: pointer;
+  z-index: 10000;
 }
 
 #menu ul li a {
   color: white;
   text-decoration: none;
+  z-index: 10000;
 }
 
 /* Estilos para el contenido */
-#container, #containerAbajo {
+#container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,50 +184,208 @@ body {
   color: aliceblue;
 }
 
-#containerAbajo {
-  margin-bottom: 120px;
-}
-
-#anuncio1 {
-  float: left;
-  width: 30%;
-  margin-left: 5%;
-}
-
-#anuncio2 {
-  margin-right: 10%;
-  float: left;
-}
-
-#anuncio2 > img {
-  width: 1000px;
-  height: 250px;
-}
-
 #contenidoGrande {
-  margin-left: 8%;
-  margin-right: 15%;
+  margin-left: 8vw;
+  margin-right: 5vw;
   text-align: justify;
 }
 
-#contenidoGrande > p {
+/* estilo para los anuncios*/
+#anuncio1 {
+  float: left;
+  width: 160vw;
+  margin-left: 5vw;
+}
+
+#anuncio1 > img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+#anuncio2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
+  width: 80vw;
+  margin-left: 10vw;
+}
+
+#anuncio2 > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* estilo h5 final*/
+.spam {
+  justify-content: center;
+  display: flex;
+  font-family: "viga";
+  margin-top: 2vw;
+  font-size: 1vw;
+}
+
+#a2 {
+  color: white;
+  font-size: 1vw;
+}
+
+/* estilos calendario */
+.content-home {
+  display: column;
+  margin-left: 25vw;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#calendar-container {
+  width: 100vw;
+  margin-right: 25vw;
+}
+
+.fc-toolbar-chunk > button {
+  width: 60px;
+  font-size: 10px;
+}
+
+.fc-button-group > button {
+  width: 50px;
   font-size: 20px;
 }
 
-#juego {
-  margin-right: -70px;
+/* estilos informacion calendario */
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* #juego > img:not(#anuncio2 > img) {
-    width: 270px;
-    height: 240px;
-    text-align: center;
-    transition: width 0.3s ease, height 0.3s ease;
+#imagen {
+  display: none;
+  width: 150px;
+  height: 150px;
+  height: auto;
+  margin-top: -90%;
+  margin-left: 70%;
 }
 
-#juego > img:not(#anuncio2 > img):hover {
-    width: 320px;
-    height: 300px;
+.menu {
+  background-color: #7aafff;
+  height: 60px;
+  width: 100%;
+  border: 0;
 }
 
- *//*# sourceMappingURL=paginas.css.map */
+.menu div {
+  display: flex;
+  margin: 0 auto;
+  width: 800px;
+  height: 100%;
+}
+
+.menu div h1, .menu div a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.menu div h1 {
+  flex: 1;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  color: #ebedee;
+  font-weight: normal;
+}
+
+.menu div a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: #c4c8cc;
+  font-weight: bold;
+}
+
+.menu div a i {
+  padding: 2px 8px 0 0;
+}
+
+.menu div a:hover {
+  color: #ebedee;
+}
+
+.content {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  margin: 0;
+  padding: 25px 0;
+  font-size: 22px;
+  border-bottom: 1px solid #ebebeb;
+  color: #ffffff;
+}
+
+/* dias de la semana color*/
+#calendar > div.fc-view-harness.fc-view-harness-active > div > table > thead > tr > th > div > div > table > thead > tr {
+  background-color: rgba(194, 200, 255, 0.9098039216);
+  margin: 5px;
+  text-align: center;
+  font-style: oblique;
+}
+
+#calendar-container {
+  position: relative;
+}
+
+.calendar-container-small {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#eventInfo {
+  background-color: #ffffff;
+  color: #275497;
+  padding: 10px;
+  margin-top: 25%;
+  border-radius: 5px;
+  position: absolute;
+  left: -450px;
+  top: 0;
+  height: 300px;
+  width: 380px;
+}
+
+.calendar {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93071), auto;
+}
+
+/* estilos emoticonos informacion footer */
+.img1 {
+  margin-right: 80px;
+  width: 50px;
+  height: 50px;
+}
+
+.img2 {
+  width: 120px;
+  height: 60px;
+}
+
+button:hover {
+  transform: scale(1.4);
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}/*# sourceMappingURL=paginas.css.map */
