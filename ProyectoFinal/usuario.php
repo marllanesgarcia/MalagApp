@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MalagApp</title>
-    <link rel="stylesheet" href="./css/perifl.css" type="text/css">
+    <link rel="stylesheet" href="./css/perfil.css" type="text/css">
+    <link rel="stylesheet" href="./css/mediaQueryPerfil.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&family=Viga&display=swap" rel="stylesheet">
@@ -19,23 +20,24 @@
     /*    Estilos para el footer  */
     footer {
         width: 100%;
-        background-color: rgba(233, 73, 73, 0.5);
+        background-color: rgba(71, 41, 155, 0.377);
         border-top: 1px solid #ccc;
         box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.007);
         height: 100%;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: -15px;
     }
 
     footer>p {
         text-align: center;
-        color: black;
+        color: white;
         margin-top: 10px;
     }
 
-    a{
+    a {
         color: black;
-        font-family: "viga";
     }
-
 </style>
 
 <body>
@@ -73,6 +75,30 @@
 
     <div class="contenido">
         <h4>
-           
+
         </h4>
     </div>
+
+    <div id="mensaje">
+        <h1> PROXIMAMENTE . . . !!</h1> 
+        <img src="https://i.gifer.com/8RDg.gif" id="imgMensaje">
+    </div>
+
+    <footer>
+        <div class="info">
+            <button onclick="mostrarModal1()"><img class="img1" src="./css/img/sobre.png" alt="email"></button>
+            <button onclick="mostrarModal2()"><img class="img1" src="./css/img/telf.png" alt="telefono"></button>
+            <button onclick="mostrarModal3()"><img class="img2" src="./css/img/reloj.png" alt="horario atencion al cliente"></button>
+        </div>
+        <p>&copy; 2024 MalagApp. Todos los derechos reservados.</p>
+        <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
+    </footer>
+
+</body>
+
+
+<script src="./js/paginas.js"></script>
+<script src="./js/saberMas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+</html>

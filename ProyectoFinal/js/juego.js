@@ -1,5 +1,13 @@
+/*
+
+    En este fichero se encuentran las funciones del logotipo
+    (para que se muestre el mensaje oculto) y la funcionalidad del
+    juego presente en la página juego.php
+
+*/
 "use strict";
 
+/* funcionalidades del logo*/
 document.addEventListener('DOMContentLoaded', function () {
     var logo = document.getElementById('logo');
     var imagen = document.getElementById('imagen');
@@ -13,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/* funcionalidades del juego */
 document.addEventListener('DOMContentLoaded', (event) => {
     let preguntasMostradas = [];
     let preguntaActual = null;

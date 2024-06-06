@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* estilos generales y comunes */
 @font-face {
   font-family: "Aladin";
   src: url("/Aladin-Regular.ttf") format("truetype");
@@ -43,6 +44,13 @@ body {
     opacity: 2;
   }
 }
+.usuario {
+  padding-top: 10px;
+  text-align: center;
+  background-color: rgba(204, 155, 99, 0.5019607843);
+  border-bottom: solid 2px rgba(91, 52, 0, 0.5019607843);
+}
+
 /* Estilos para el logotipo */
 .logo {
   background-color: rgba(209, 171, 127, 0.192);
@@ -102,14 +110,7 @@ body {
   margin-top: 5vw;
 }
 
-.usuario {
-  padding-top: 10px;
-  text-align: center;
-  background-color: rgba(204, 155, 99, 0.5019607843);
-  border-bottom: solid 2px rgba(91, 52, 0, 0.5019607843);
-}
-
-/* Estilos para el botón */
+/* Estilos para el menú lateral */
 #boton {
   position: fixed;
   top: 30px;
@@ -124,7 +125,6 @@ body {
   cursor: pointer;
 }
 
-/* Estilos para el menú lateral */
 #menu {
   position: fixed;
   top: 0;
@@ -139,13 +139,11 @@ body {
   z-index: 10000;
 }
 
-/* Ocultar el menú por defecto */
 #menu.hidden {
   transform: translateX(100%);
   z-index: 10000;
 }
 
-/* Estilos para la lista de opciones del menú */
 #menu ul {
   list-style-type: none;
   padding: 0;
@@ -239,7 +237,7 @@ body {
   display: flex;
   font-family: "viga";
   margin-top: 2vw;
-  font-size: 2vw;
+  font-size: 10px;
 }
 
 /* estilos emoticonos informacion footer */

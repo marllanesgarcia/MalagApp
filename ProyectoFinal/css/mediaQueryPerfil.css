@@ -1,0 +1,39 @@
+/*
+    Media Query
+*/
+/* Estilos para móviles y tablets */
+@media only screen and (max-width: 768px) {
+   
+    .titulo > h1{
+        font-size: 400%;
+        margin-bottom: 0px;
+        margin-top: 45px;
+    }
+
+    .logo{
+        width: 90px;
+        height: 90px;
+        top:10%;
+        left: 10px;
+    }
+
+    .logo > img{
+        margin-left: 30%;
+        margin-top: -18%;
+    }
+
+    #imagen {
+        margin-top: -120%;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .logo > h5{
+        width: 55px;
+        height: 12px;
+        margin-top: 25%;
+        margin-bottom: 2%;
+        margin-left: 4%;
+        font-size: 12px;
+    }
+}

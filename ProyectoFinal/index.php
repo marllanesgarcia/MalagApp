@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css"> 
-    <!--<link rel="stylesheet" href="./css/mediaQueryIndex.css"> -->
+    <link rel="stylesheet" href="./css/mediaQueryIndex.css">
     <link rel="stylesheet" href="./css/formulario.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&family=Viga&display=swap" rel="stylesheet">
 
     <title>MalagApp</title>
 </head>
@@ -47,7 +48,7 @@
         if (isset($_SESSION['usuario'])) {
             echo "<h5 style='color:white;text-align:center;margin-top: 10px;'>¡Bienvenidx de vuelta, <strong><i>" . $_SESSION['usuario'] . "</i></strong>!</h5>";
         } else {
-            echo "<h5 style='color:white;text-align:center; margin-top: 10px;'> Hola,  <strong><i>boquerón</i></strong>. . . </h5>";
+            echo "<h5 style='color:white;text-align:center; margin-top: 10px; margin-right: 80px;'> Hola,  <strong><i>boquerón</i></strong>. . . </h5>";
         }
         ?>
     </div>
@@ -138,11 +139,10 @@
 
             $sql = "SELECT nombre, puntuacion, comentario FROM comentarios WHERE puntuacion IN (4, 5) ORDER BY id DESC LIMIT 5";
             $result = $conn->query($sql);
-            //width: auto; heigth: auto;
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='comentario' style='display: inline-block; height: auto; margin-right: 20px; padding: 20px; -webkit-line-clamp: 5; overflow: hidden;'>";
-                    echo "<h3 style='width: auto; heigth: auto;'>" . htmlspecialchars($row['nombre']) . "</h3></br>" . "<h3>" . str_repeat("⭐", $row['puntuacion']) . "</h3>";
+                    echo "<h3 style='width: auto; heigth: auto;overflow-wrap: break-word;'>" . htmlspecialchars($row['nombre']) . "</h3></br>" . "<h3>" . str_repeat("⭐", $row['puntuacion']) . "</h3>";
                     echo "<p style='margin: 0; -webkit-line-clamp: 4;-webkit-box-orient: vertical; overflow-wrap: break-word;'>" . htmlspecialchars($row['comentario']) . "</p>";
                     echo "</div>";
                 }

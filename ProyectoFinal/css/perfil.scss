@@ -1,6 +1,8 @@
+/* estilos generales y principales*/
 $alineacion:center;
 $posicion: flex;
 $max: 100%;
+$ninguno: 0;
 $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 
 @font-face {
@@ -20,11 +22,11 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 
 body{
     background-attachment: fixed;
-    background: linear-gradient(to bottom,#eb7171, #fd8d8d,#fcabab, #FFFFFF);
+    background: linear-gradient(to bottom,#6579ec, #9e8dfd,#b7abfc, #ffffff);
     background-size: cover;
     font-family: 'Viga', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: $ninguno;
+    padding: $ninguno;
 }
 
 .titulo{
@@ -38,11 +40,11 @@ body{
 .titulo > h1{
     font-family: 'Aladin';
     font-size: 700%;
-    color: #560d0d;
+    color: #180d56;
      -webkit-text-stroke: 1px black;
     text-stroke: 1px black;
     animation: aparecer 5s forwards;
-    opacity: 0;
+    opacity: $ninguno;
 } 
 
 .titulo {
@@ -50,15 +52,23 @@ body{
 }
 @keyframes aparecer {
     from {
-        opacity: 0; 
+        opacity: $ninguno; 
     }
     to {
         opacity: 2;
     }
 }
 
+.usuario{
+    padding-top: 10px;
+    text-align: center;
+    background-color: #4c4b9980;
+    border-bottom:solid 2px #06005b80 ;
+}
+
+/* estilos para el logotipo*/
 .logo{
-    background-color: rgba(209, 127, 127, 0.192);
+    background-color: rgba(145, 127, 209, 0.192);
     border-radius: $max;
     width: 250px;
     height: 250px;
@@ -68,8 +78,8 @@ body{
 }
 
 .logo:hover {
-    background-color: rgba(155, 41, 41, 0.377);
-    border:2px solid rgb(100, 34, 34);
+    background-color: rgba(71, 41, 155, 0.377);
+    border:2px solid rgb(34, 46, 100);
 }
 
 .logo > img{
@@ -99,6 +109,23 @@ body{
     margin-left: 70%;
 }
 
+/* contenido */
+#mensaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+#imgMensaje {
+    margin-top: 20px; 
+    width: 300px;
+}
+
+
+/* estilos para la introduccion*/
 .contenido{
     text-align: justify;
     justify-content: $alineacion;
@@ -114,21 +141,14 @@ body{
     margin-top: 100px;
 }
 
-.usuario{
-    padding-top: 10px;
-    text-align: center;
-    background-color: #994b4b80;
-    border-bottom:solid 2px #5b000080 ;
-}
-
-/* Estilos para el botón */
+  /* Estilos para el menú lateral */
 #boton {
     position: fixed;
     top: 30px;
     right: 30px;
     padding: 10px 20px;
     margin-top: 40px;
-    background-color: #750b0b81;
+    background-color: #1b0b7581;
     color: white;
     border: none;
     height: 70px;
@@ -136,11 +156,10 @@ body{
     cursor: pointer;
   }
   
-  /* Estilos para el menú lateral */
-  #menu {
+#menu {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: $ninguno;
+    right: $ninguno;
     width: 260px;
     height: 100%;
     background-color: #333;
@@ -150,29 +169,53 @@ body{
     transition: transform 0.3s ease-in-out;
   }
   
-  /* Ocultar el menú por defecto */
-  #menu.hidden {
+#menu.hidden {
     transform: translateX(100%);
   }
   
-  /* Estilos para la lista de opciones del menú */
-  #menu ul {
+#menu ul {
     list-style-type: none;
     padding: 0;
     padding-top: 30%;
     padding-left: 10%;
   }
   
-  #menu ul li {
+#menu ul li {
     margin-bottom: 30px;
   }
   
-  #menu ul li a:hover {
-    color: #ff5d5d9f;
+#menu ul li a:hover {
+    color: #805dff9f;
     cursor: pointer;
   }
 
-  #menu ul li a {
+#menu ul li a {
     color: white;
     text-decoration: none;
   }
+
+/* estilos emoticonos informacion footer */
+.img1{
+    margin-right: 80px;
+    width: 50px;
+    height: 50px;
+}
+
+ .img2{
+    width: 120px;
+    height: 60px;
+} 
+
+button:hover {
+    transform: scale(1.4);
+}
+
+button {
+    border: none;
+    background: none;
+    padding: $ninguno;
+    margin: $ninguno;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}

@@ -1,3 +1,9 @@
+/*
+
+    Fichero en el que se encuentras la funciones relacionadas con el menú con
+    la finalidad de navegar por las diferentes páginas que conforman la web.
+
+*/
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -26,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Mostrar el menú después de 3 segundos
     setTimeout(function () {
         menu.style.display = 'block';
         setTimeout(function () {

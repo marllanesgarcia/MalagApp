@@ -1,0 +1,8 @@
+Para el uso de la base de datos, cambiar datos de usuario en:
+
+1.- datoseventos.php
+2.- funcionesInicioSesion.php
+3.- funcionesRegistro.php
+4.- funcioneFestividades.php
+5.- funcionesJuego.php
+6.- funcionesRutas.php

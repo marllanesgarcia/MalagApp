@@ -1,6 +1,8 @@
+/* estilo principal y común*/
 $alineacion:center;
 $posicion: flex;
 $max: 100%;
+$ninguno: 0;
 $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 
 @font-face {
@@ -17,8 +19,8 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     background-color:rgb(132, 204, 153);
     background-size: cover;
     font-family: 'Viga', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: $ninguno;
+    padding: $ninguno;
 }
 
 .titulo{
@@ -34,7 +36,7 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     -webkit-text-stroke: 1px black;
     text-stroke: 1px black;
     animation: aparecer 5s forwards;
-    opacity: 0;
+    opacity: $ninguno;
 }
 
 .titulo {
@@ -42,13 +44,22 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 }
 @keyframes aparecer {
     from {
-        opacity: 0; 
+        opacity: $ninguno; 
     }
     to {
         opacity: 2;
     }
 }
 
+.usuario{
+    padding-top: 10px;
+    text-align: center;
+    background-color: rgba(25, 129, 51, 0.377);
+    border-bottom:2px solid rgb(5, 80, 34);
+}
+
+
+/* estilos del logotipo */
 .logo{
     background-color: rgba(75, 165, 102, 0.096);
     border-radius: $max;
@@ -92,6 +103,7 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 }
 
 
+/* estilo párrafo de introducción*/
 .contenido{
     text-align: justify;
     justify-content: $alineacion;
@@ -107,13 +119,7 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     margin-top: 100px;
 }
 
-.usuario{
-    padding-top: 10px;
-    text-align: center;
-    background-color: rgba(25, 129, 51, 0.377);
-    border-bottom:2px solid rgb(5, 80, 34);
-}
-
+  /* Estilos para el menú lateral */
 #boton {
     position: fixed;
     top: 30px;
@@ -128,11 +134,11 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     cursor: pointer;
   }
   
-  /* Estilos para el menú lateral */
-  #menu {
+
+#menu {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: $ninguno;
+    right: $ninguno;
     width: 260px;
     height: 100%;
     background-color: black;
@@ -142,43 +148,39 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     transition: transform 0.3s ease-in-out;
   }
   
-  /* Ocultar el menú por defecto */
-  #menu.hidden {
+#menu.hidden {
     transform: translateX(100%);
   }
   
-  /* Estilos para la lista de opciones del menú */
-  #menu ul {
+#menu ul {
     list-style-type: none;
-    padding: 0;
+    padding: $ninguno;
     padding-top: 30%;
     padding-left: 10%;
   }
   
-  #menu ul li {
+#menu ul li {
     margin-bottom: 30px;
   }
   
-  #menu ul li a:hover {
+#menu ul li a:hover {
     color: #aef2a8;
     cursor: pointer;
   }
 
-  #menu ul li a {
+#menu ul li a {
     color: white;
     text-decoration: none;
   }
 
-
 /* Estilos para el contenido */
-
 #cuestionario{
     display: column;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 30px;
-    padding-bottom:0 ;
+    padding-bottom: $ninguno;
     padding: 5%;
     background-color: #3e8a60a6;
     border: solid 2px black;
@@ -204,7 +206,6 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     padding: 20px;
     margin-right: 10px;
     background-color: #D9D9D9;
-
 }
 
 #botones{
@@ -223,7 +224,7 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     border: black 2px solid;
     border-radius: 60%;
     margin: 10px;
-    margin-top:0;
+    margin-top: $ninguno;
     width: 250px;
     height: 80px;
     font-size: larger;
@@ -245,7 +246,6 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 }
 
 /* estilos emoticonos informacion footer */
-
 .img1{
     margin-right: 80px;
     width: 50px;
@@ -264,8 +264,8 @@ button:hover {
 button {
     border: none;
     background: none;
-    padding: 0;
-    margin: 0;
+    padding: $ninguno;
+    margin: $ninguno;
     font: inherit;
     cursor: pointer;
     outline: inherit;

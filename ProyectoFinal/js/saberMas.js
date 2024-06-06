@@ -1,5 +1,12 @@
+/*
+
+    En este fichero se encuentran las funcionalidades del logotipo 
+    (para que se muestre la imagen oculta) y de los modales del footer.
+
+*/
 "use strict";
 
+/* funcionalidades del logotipo */
 document.addEventListener('DOMContentLoaded', function () {
     var logo = document.getElementById('logo');
     var imagen = document.getElementById('imagen');
@@ -14,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+/* funcionalidades de los modales */
 function mostrarModal1() {
     swal({
         title: 'Correo Electrónico',

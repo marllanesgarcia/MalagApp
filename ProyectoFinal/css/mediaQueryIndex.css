@@ -1,35 +1,19 @@
 /*
     Media Query
 */
-/* Estilos para móviles y tablets 
-@media (max-width: 900px) {
+/* Estilos para móviles y tablets */
+@media (max-width: 1208px) {
 
     .titulo{
         position: relative;
-        margin-right: 10px;
+        margin-right: 30px;
     }
 
     .titulo > h1 {
-
         font-size: 30px;
-        margin-left: 5%;
+        justify-content: center;
         text-align: center;
-        animation: aparecer 3s forwards;
-    }
-
-    @keyframes aparecer {
-        0% {
-            font-size: 3em;
-            opacity: 1;
-        }
-        50% {
-            font-size: 0.1em;
-            opacity: 0;
-        }
-        100% {
-            font-size: 2em;
-            opacity: 1;
-        }
+        margin-right: 35%;
     }
 
     .cerrarSesion{
@@ -41,8 +25,8 @@
     .logo {
         width: 200px;
         height: 200px;
-        left: 10%;
-        margin-top: 18%;
+        left: 20%;
+        margin-top: 16%;
     }
 
     .logo:hover {
@@ -71,26 +55,6 @@
         margin-left: 70%;
     }
     
-    .rotate-text {
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        transform: translate(-20%, -20%) rotate(-90deg); 
-        animation: pulsate 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulsate {
-        0% {
-            font-size: 20px; 
-        }
-        50% {
-            font-size: 70px; 
-        }
-        100% {
-            font-size: 20px; 
-        }
-    }
-    
     .menu{
         margin-top: -12%;
         margin-left: 15%;
@@ -98,7 +62,7 @@
     }
 
     .festividades, .historia, .juego, .rutas, .opcion {
-        margin-top: 20%;
+        margin-top: 25%;
     }
 
     .rutas{
@@ -122,7 +86,7 @@
     }
 
 }
-*/
+
 
 /* Estilos para portátil y escritorio 
 @media only screen and (min-width: 769px) {

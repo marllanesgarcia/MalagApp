@@ -1,6 +1,9 @@
+/* estilos principales y comunes */
 $alineacion:center;
 $posicion: flex;
 $max: 100%;
+$ninguno: 0;
+$tamano: 250px;
 $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 
 @font-face {
@@ -18,8 +21,8 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     background: #DAA8F2;
     background-size: cover;
     font-family: 'Viga', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: $ninguno;
+    padding: $ninguno;
 }
 
 .titulo{
@@ -35,7 +38,7 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     -webkit-text-stroke: 1px black;
     text-stroke: 1px black;
     animation: aparecer 5s forwards;
-    opacity: 0;
+    opacity: $ninguno;
 }
 
 .titulo {
@@ -43,19 +46,26 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 }
 @keyframes aparecer {
     from {
-        opacity: 0; 
+        opacity: $ninguno; 
     }
     to {
         opacity: 2;
     }
 }
 
+.usuario{
+    padding-top: 10px;
+    text-align: center;
+    background-color: rgba(129, 25, 75, 0.377);
+    border-bottom:2px solid rgb(80, 5, 57);
+}
+
 /* Estilos para el logotipo */
 .logo{
     background-color: rgba(165, 75, 135, 0.096);
     border-radius: $max;
-    width: 250px;
-    height: 250px;
+    width: $tamano;
+    height: $tamano;
     position: absolute;
     top: 20%;
     left: 25px;
@@ -93,6 +103,7 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     background: linear-gradient(to right, #A19BE7 0%, #A19BE7 50%, #89B6C4 50%, #218D2C 100%);
 }
 
+/* estilo texto introduccion */
 .contenido{
     text-align: justify;
     justify-content: $alineacion;
@@ -108,12 +119,6 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     margin-top: 100px;
 }
 
-.usuario{
-    padding-top: 10px;
-    text-align: center;
-    background-color: rgba(129, 25, 75, 0.377);
-    border-bottom:2px solid rgb(80, 5, 57);
-}
 
 /* Estilos para el botón */
 #boton {
@@ -130,12 +135,12 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     cursor: pointer;
   }
   
-  /* Estilos para el menú lateral */
-  #menu {
+/* Estilos para el menú lateral */
+#menu {
     position: fixed;
     z-index: 1000;
-    top: 0;
-    right: 0;
+    top: $ninguno;
+    right: $ninguno;
     width: 260px;
     height: 100%;
     background-color: black;
@@ -145,29 +150,27 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     transition: transform 0.3s ease-in-out;
   }
   
-  /* Ocultar el menú por defecto */
-  #menu.hidden {
+#menu.hidden {
     transform: translateX(100%);
   }
   
-  /* Estilos para la lista de opciones del menú */
-  #menu ul {
+#menu ul {
     list-style-type: none;
-    padding: 0;
+    padding: $ninguno;
     padding-top: 30%;
     padding-left: 10%;
   }
   
-  #menu ul li {
+#menu ul li {
     margin-bottom: 30px;
   }
   
-  #menu ul li a:hover {
+#menu ul li a:hover {
     color: #DAA8F2;
     cursor: pointer;
   }
 
-  #menu ul li a {
+#menu ul li a {
     color: white;
     text-decoration: none;
   }
@@ -191,10 +194,11 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
     display: $posicion;
     align-items: $alineacion;
     margin-top: 30px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: $tamano;
+    margin-right: $tamano;
 }
 
+/* estilos fotos */
 #fotoCompañia {
     margin-right: 20px; 
 }
@@ -207,7 +211,7 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 
 #fotoCompañia2 img {
     width: 350px;
-    height: 250px;
+    height: $tamano;
     border-radius: 50%;
     margin-bottom: 40px;
 }
@@ -221,7 +225,6 @@ $fuenteTexto: ('Arial, sans-serif', 'Aladin, system-ui', 'Viga, sans-serif');
 #contenidoTexto2{
     margin-right: 20px;
 }
-
 
 /* estilos emoticonos informacion footer */
 .img1{
@@ -242,8 +245,8 @@ button:hover {
 button {
     border: none;
     background: none;
-    padding: 0;
-    margin: 0;
+    padding: $ninguno;
+    margin: $ninguno;
     font: inherit;
     cursor: pointer;
     outline: inherit;

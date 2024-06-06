@@ -1,5 +1,12 @@
+/*
+
+    En este fichero se encuentran las funcionalidades del logo (para que se
+    muestre la imagen), del menú desplegable y del mapa.
+
+*/
 "use strict";
 
+/*funcionalidades logo */
 document.addEventListener('DOMContentLoaded', function () {
     const boton = document.getElementById('boton');
     const menu = document.getElementById('menu');
@@ -13,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             imagen.style.display = 'none';
         }
     });
-
+/* funcionalidades del menu desplegable */
     boton.addEventListener('click', function () {
         event.stopPropagation();
         menu.classList.toggle('hidden');
@@ -24,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
             menu.classList.add('hidden');
         }
     });
-
-    var map = L.map('map').setView([36.71786, -4.420279], 15); // Coordenadas aproximadas de Málaga
+ /* Funcionalidades del mapa */
+    var map = L.map('map').setView([36.71786, -4.420279], 15); 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap'

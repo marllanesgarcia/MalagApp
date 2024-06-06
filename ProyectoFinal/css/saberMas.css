@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* estilos principales y comunes */
 @font-face {
   font-family: "Aladin";
   src: url("/Aladin-Regular.ttf") format("truetype");
@@ -44,6 +45,13 @@
     opacity: 2;
   }
 }
+.usuario {
+  padding-top: 10px;
+  text-align: center;
+  background-color: rgba(129, 25, 75, 0.377);
+  border-bottom: 2px solid rgb(80, 5, 57);
+}
+
 /* Estilos para el logotipo */
 .logo {
   background-color: rgba(165, 75, 135, 0.096);
@@ -87,6 +95,7 @@
   background: linear-gradient(to right, #A19BE7 0%, #A19BE7 50%, #89B6C4 50%, #218D2C 100%);
 }
 
+/* estilo texto introduccion */
 .contenido {
   text-align: justify;
   justify-content: center;
@@ -100,13 +109,6 @@
   margin-right: 10vw;
   margin-left: 10vw;
   margin-top: 100px;
-}
-
-.usuario {
-  padding-top: 10px;
-  text-align: center;
-  background-color: rgba(129, 25, 75, 0.377);
-  border-bottom: 2px solid rgb(80, 5, 57);
 }
 
 /* Estilos para el botón */
@@ -139,12 +141,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Ocultar el menú por defecto */
 #menu.hidden {
   transform: translateX(100%);
 }
 
-/* Estilos para la lista de opciones del menú */
 #menu ul {
   list-style-type: none;
   padding: 0;
@@ -189,6 +189,7 @@
   margin-right: 250px;
 }
 
+/* estilos fotos */
 #fotoCompañia {
   margin-right: 20px;
 }

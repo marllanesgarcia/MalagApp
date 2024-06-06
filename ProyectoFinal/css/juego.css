@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* estilo principal y común*/
 @font-face {
   font-family: "Aladin";
   src: url("/Aladin-Regular.ttf") format("truetype");
@@ -43,6 +44,14 @@
     opacity: 2;
   }
 }
+.usuario {
+  padding-top: 10px;
+  text-align: center;
+  background-color: rgba(25, 129, 51, 0.377);
+  border-bottom: 2px solid rgb(5, 80, 34);
+}
+
+/* estilos del logotipo */
 .logo {
   background-color: rgba(75, 165, 102, 0.096);
   border-radius: 100%;
@@ -85,6 +94,7 @@
   background: linear-gradient(to right, #A19BE7 0%, #A19BE7 50%, #89B6C4 50%, #218D2C 100%);
 }
 
+/* estilo párrafo de introducción*/
 .contenido {
   text-align: justify;
   justify-content: center;
@@ -100,13 +110,7 @@
   margin-top: 100px;
 }
 
-.usuario {
-  padding-top: 10px;
-  text-align: center;
-  background-color: rgba(25, 129, 51, 0.377);
-  border-bottom: 2px solid rgb(5, 80, 34);
-}
-
+/* Estilos para el menú lateral */
 #boton {
   position: fixed;
   top: 30px;
@@ -121,7 +125,6 @@
   cursor: pointer;
 }
 
-/* Estilos para el menú lateral */
 #menu {
   position: fixed;
   top: 0;
@@ -135,12 +138,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Ocultar el menú por defecto */
 #menu.hidden {
   transform: translateX(100%);
 }
 
-/* Estilos para la lista de opciones del menú */
 #menu ul {
   list-style-type: none;
   padding: 0;
